@@ -24,6 +24,21 @@ public class Veiculo {
     private String ano;
 
     @NotBlank
+    @Size(max=15)
+    private String cor;
+
+    @NotBlank
+    @Size(max=2)
+    private String qtd_portas;
+
+    @NotBlank
+    @Size(max=4)
+    private String potencia;
+
+    @NotBlank
+    private Double kilometragem;
+
+    @NotBlank
     @Size(max=9)
     private String placa;
 
