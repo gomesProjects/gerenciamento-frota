@@ -23,13 +23,13 @@ public class DefaultController<M, S extends DefaultService<M, ?>> {
     }
 
     @GetMapping
-    public ResponseEntity<List<M>> findAll(@RequestBody String search) throws Exception{
-        System.out.println(search);
-        if(search != null){
-            return ResponseEntity.ok(service.findByString(search));
-        }
-        return ResponseEntity.ok(service.findAll());
+    public ResponseEntity<List<M>> findByModeloOrMarca(@RequestParam String search) throws Exception{
+        return ResponseEntity.ok(service.findByString(search));
+    }
 
+    @GetMapping("all")
+    public ResponseEntity<List<M>> findAll() throws Exception{
+        return ResponseEntity.ok(service.findAll());
     }
 
     @PostMapping

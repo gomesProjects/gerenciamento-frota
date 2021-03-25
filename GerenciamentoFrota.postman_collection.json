@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "e83b58f7-92ab-4da9-bfa1-3c0c1b6dc771",
+		"name": "GerenciamentoFrota",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastro Modelo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Fusca\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/modelo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modelo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastro Marca",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Volkswagen\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/marca",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastro Veiculo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ano\":\"1970\",\r\n    \"cor\":\"preta\",\r\n    \"qtd_portas\":\"2\",\r\n    \"potencia\":\"40\",\r\n    \"kilometragem\":800000,\r\n    \"placa\":\"BRA2I29\",\r\n    \"marca\":{\r\n        \"id\":1\r\n    },\r\n    \"modelo\":{\r\n        \"id\":2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/veiculo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"veiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista carro por modelo ou marca",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Volkswagen"
+				},
+				"url": {
+					"raw": "http://localhost:8080/veiculo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"veiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista todos os carros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/veiculo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"veiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista todos os modelos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/veiculo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"veiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista todas as marcas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/veiculo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"veiculo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
