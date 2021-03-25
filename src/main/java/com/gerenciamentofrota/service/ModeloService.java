@@ -1,11 +1,11 @@
 package com.gerenciamentofrota.service;
 
-import com.gerenciamentofrota.model.Veiculo;
-import com.gerenciamentofrota.repository.VeiculoRepository;
+import com.gerenciamentofrota.model.Modelo;
+import com.gerenciamentofrota.repository.ModeloRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class ModeloService extends DefaultService<Veiculo, VeiculoRepository> {
+public class ModeloService extends DefaultService<Modelo, ModeloRepository> {
 }
