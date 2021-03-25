@@ -36,7 +36,7 @@ public class Veiculo {
     private String potencia;
 
     @NotBlank
-    private Double kilometragem;
+    private Integer kilometragem;
 
     @NotBlank
     @Size(max=9)
