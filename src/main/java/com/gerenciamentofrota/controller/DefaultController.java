@@ -13,14 +13,23 @@ public class DefaultController<M, S extends DefaultService<M, ?>> {
     @Autowired
     private S service;
 
+    public S getService() {
+        return service;
+    }
+
     @GetMapping("{id}")
     public ResponseEntity<Optional<M>> findById(@PathVariable Long id) throws Exception{
         return ResponseEntity.ok(service.findById(id));
     }
 
     @GetMapping
-    public ResponseEntity<List<M>> findAll() throws Exception{
+    public ResponseEntity<List<M>> findAll(@RequestBody String search) throws Exception{
+        System.out.println(search);
+        if(search != null){
+            return ResponseEntity.ok(service.findByString(search));
+        }
         return ResponseEntity.ok(service.findAll());
+
     }
 
     @PostMapping

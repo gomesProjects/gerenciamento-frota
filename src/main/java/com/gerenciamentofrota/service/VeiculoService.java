@@ -11,11 +11,30 @@ import java.util.List;
 @RequiredArgsConstructor
 public class VeiculoService extends DefaultService<Veiculo, VeiculoRepository> {
 
-    public List<Veiculo> findByModelo(String modelo) throws Exception{
-        return getRepository().findByModelo(modelo);
-    }
+    @Override
+    public List<Veiculo> findByString(String search) {
 
-    public List<Veiculo> findByMarca(String marca) throws Exception{
-        return getRepository().findByMarca(marca);
+
+        List<Veiculo> marca = getRepository().findByMarca(search);
+        List<Veiculo> modelo = getRepository().findByModelo(search);
+
+        if(marca != null) {
+            return marca;
+        } else {
+            return modelo;
+        }
+
+
+
+        /*try {
+            return getRepository().findByModelo(search);
+        } catch (Exception e) {
+            try {
+                return getRepository().findByMarca(search);
+            } catch (Exception e2) {
+                e.printStackTrace();
+            }
+            return null;
+        }*/
     }
 }

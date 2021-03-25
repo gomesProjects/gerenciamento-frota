@@ -24,6 +24,10 @@ public class DefaultService<M, R extends JpaRepository<M, Long>> {
         return repository.findAll();
     }
 
+    public List<M> findByString(String search) {
+        return List.of();
+    }
+
     public void delete(Long id) throws Exception {
         repository.deleteById(id);
     }

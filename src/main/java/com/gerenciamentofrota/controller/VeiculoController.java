@@ -2,8 +2,10 @@ package com.gerenciamentofrota.controller;
 
 import com.gerenciamentofrota.model.Veiculo;
 import com.gerenciamentofrota.service.VeiculoService;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("veiculo")
