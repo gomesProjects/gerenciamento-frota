@@ -37,7 +37,6 @@ public class Veiculo {
     private String potencia;
 
     @NotNull
-    @Size(max=10)
     private int kilometragem;
 
     @NotBlank
@@ -46,9 +45,11 @@ public class Veiculo {
 
     @JoinColumn(name="marca_id")
     @ManyToOne
+    @NotNull
     private Marca marca;
 
     @JoinColumn(name="modelo_id")
     @ManyToOne
+    @NotNull
     private Modelo modelo;
 }
