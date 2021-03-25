@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Data
@@ -35,8 +36,9 @@ public class Veiculo {
     @Size(max=4)
     private String potencia;
 
-    @NotBlank
-    private Integer kilometragem;
+    @NotNull
+    @Size(max=10)
+    private int kilometragem;
 
     @NotBlank
     @Size(max=9)
