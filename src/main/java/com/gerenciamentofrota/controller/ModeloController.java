@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("veiculo")
+@RequestMapping("modelo")
 public class ModeloController extends DefaultController<Modelo, ModeloService> {
 }
