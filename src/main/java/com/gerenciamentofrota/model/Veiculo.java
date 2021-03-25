@@ -45,11 +45,9 @@ public class Veiculo {
 
     @JoinColumn(name="marca_id")
     @ManyToOne
-    @NotNull
     private Marca marca;
 
     @JoinColumn(name="modelo_id")
     @ManyToOne
-    @NotNull
     private Modelo modelo;
 }
